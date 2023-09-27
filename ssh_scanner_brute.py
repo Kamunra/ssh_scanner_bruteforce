@@ -114,7 +114,7 @@ if __name__ == '__main__':
     elif args.start_port:
         scan_port(args.host, args.start_port)
 
-    target_port = args.start_port if not args.target_port else args.target_port
+    target_port = 22 if not args.target_port else args.target_port
 
     if target_port == 22 and ssh_open:
         with open(args.passfile, "r") as p:
